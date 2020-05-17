@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>CNVRS</title>
+    <link rel="icon" href="assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="screen" href="node_modules/converse.js/dist/converse.min.css">
+    <script src="lib/libsignal-protocol.js" charset="utf-8"></script>
+    <script src="lib/libsignal-protocol-worker.js" charset="utf-8"></script>
+    <script src="node_modules/converse.js/dist/converse.min.js" charset="utf-8"></script>
+</head>
+<body>
+<script>
+    converse.initialize({
+        authentication: 'login',
+        auto_away: 300,
+        auto_reconnect: true,
+        discover_connection_methods: true,
+        bosh_service_url: 'https://gammel.cloud:5281/', // Please use this connection manager only for testing purposes
+        message_archiving: 'always',
+        view_mode: 'fullscreen'
+    });
+</script>
+</body>
+</html>
