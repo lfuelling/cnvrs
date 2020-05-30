@@ -10,7 +10,11 @@
     "build:clean": "rm -rf build/ .cache dist/",
     "build:electron": "electron-builder -mwl"
   },
-  "author": "",
+  "author": {
+    "name": "Lukas Fülling",
+    "email": "lukas@k40s.net",
+    "url": "https://lerks.blog/"
+  },
   "license": "MIT",
   "homepage": "./",
   "devDependencies": {
@@ -31,11 +35,11 @@
     ],
     "mac": {
       "target": "dmg",
-      "icon": "assets/logo.png"
+      "icon": "assets/logo.icns"
     },
     "win": {
       "target": "nsis",
-      "icon": "assets/logo.png"
+      "icon": "assets/logo.ico"
     },
     "linux": {
       "target": "deb",
