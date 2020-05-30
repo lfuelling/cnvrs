@@ -1,14 +1,12 @@
 {
   "name": "cnvrs",
   "version": "1.0.0",
-  "description": "ConverJS as Electron App",
+  "description": "ConverseJS as Electron App",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"cross-env BROWSER=none npm run start:ui\" \"wait-on http://localhost:3000 && electron . \"",
-    "start:ui": "parcel -p 3000 index.html --out-dir build",
-    "build": "npm run build:clean && npm run build:ui && npm run build:electron",
-    "build:ui": "parcel build index.html --out-dir build --public-url ./",
+    "start": "electron .",
+    "build": "npm run build:clean && npm run build:electron",
     "build:clean": "rm -rf build/ .cache dist/",
     "build:electron": "electron-builder -mwl"
   },
@@ -19,18 +17,17 @@
     "babel-core": "^6.26.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "concurrently": "^5.2.0",
     "cross-env": "^7.0.2",
     "electron": "^8.3.0",
-    "electron-builder": "^22.6.0",
-    "parcel-bundler": "^1.12.4",
-    "wait-on": "^5.0.0"
+    "electron-builder": "^22.6.0"
   },
   "build": {
     "appId": "sh.lrk.cnvrs",
     "files": [
       "main.js",
-      "build/**/*"
+      "index.html",
+      "assets/**/*",
+      "lib/**/*"
     ],
     "mac": {
       "target": "dmg",
