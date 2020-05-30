@@ -4,7 +4,7 @@
   "description": "ConverseJS as Electron App",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no tests yet...\" && exit 0",
     "start": "electron .",
     "build": "npm run build:clean && npm run build:electron",
     "build:clean": "rm -rf build/ .cache dist/",
