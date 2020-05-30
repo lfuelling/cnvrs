@@ -11,6 +11,7 @@ function createWindow () {
         height: 850,
         devTools: isDev,
         icon: 'assets/logo.ico',
+        partition: 'cnvrs',
         webPreferences: {
             nodeIntegration: false
         }
