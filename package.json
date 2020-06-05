@@ -1,6 +1,6 @@
 {
   "name": "cnvrs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ConverseJS as Electron App",
   "main": "main.js",
   "scripts": {
